@@ -3,14 +3,17 @@
 // import viteLogo from '/vite.svg'
 import './App.css';
 
-function App() {
-  // const [count, setCount] = useState(0)
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './client/pages/home';
 
+const App: React.FC = () => {
   return (
-    <>
-      <div></div>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
