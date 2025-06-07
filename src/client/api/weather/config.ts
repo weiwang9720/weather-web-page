@@ -6,9 +6,9 @@ const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
 if (!API_KEY) {
   console.error('Missing API Key');
   // 生产环境直接报错
-  if (process.env.NODE_ENV === 'production') {
-    throw new Error('API Key is required');
-  }
+  // if (process.env.NODE_ENV === 'production') {
+  //   throw new Error('API Key is required');
+  // }
 }
 
 const weatherApi = axios.create({
@@ -20,13 +20,13 @@ const weatherApi = axios.create({
 });
 
 // 响应拦截器
-weatherApi.interceptors.response.use(
-  (response) => response.data,
-  (error) => {
-    console.error('API Error:', error.message);
-    return Promise.reject(error);
-  }
-);
+// weatherApi.interceptors.response.use(
+//   (response) => response,
+//   (error) => {
+//     console.error('API Error:', error.message);
+//     return Promise.reject(error);
+//   }
+// );
 
 // 响应拦截器：处理错误
 weatherApi.interceptors.response.use(

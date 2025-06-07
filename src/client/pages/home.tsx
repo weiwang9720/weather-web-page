@@ -34,6 +34,8 @@ const Home: React.FC = () => {
       fetchForecastWeather(location, 3),
     ])
       .then(([current, forecastData]) => {
+        console.log('测试接口', current, forecastData);
+
         setCurrentWeather(current);
         setForecast(forecastData);
       })
