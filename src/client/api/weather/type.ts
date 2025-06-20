@@ -164,3 +164,25 @@ export interface ForecastWeatherResponse extends WeatherResponse {
     }>;
   };
 }
+
+interface District {
+  name: string; // 名称（如"北京市"）
+  adcode: string; // 行政区划代码（如"110000"）
+  level: 'province' | 'city' | 'district'; // 层级
+  districts?: District[]; // 子级行政区（可选）
+}
+
+// 省级响应
+export interface ProvinceResponse {
+  districts: District[]; // 首项是中国，其districts才是省份列表
+}
+
+// 市级响应
+export interface CityResponse {
+  districts: District[]; // 首项是省份，其districts是城市列表
+}
+
+// 区级响应
+export interface DistrictResponse {
+  districts: District[]; // 首项是城市，其districts是区列表
+}

@@ -2,19 +2,21 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
-  max-width: 500px;
-  margin: 20px auto;
+  min-width: 500px;
+  margin: 0;
+  width: 100%;
 }
 
+/* 其他样式保持不变 */
 .current-weather {
-  text-align: center;
+  /* text-align: center; */
   margin-bottom: 20px;
 }
 
 .current-temp {
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   gap: 10px;
 }
 
@@ -29,6 +31,6 @@
 }
 
 .forecast-day {
-  text-align: center;
+  /* text-align: center; */
   flex: 1;
 }

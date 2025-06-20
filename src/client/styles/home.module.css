@@ -1,0 +1,15 @@
+.home {
+  width: 100vh;
+  padding: 20px; /* 添加一些内边距 */
+}
+
+/* 修改搜索框样式 */
+.home .ant-input-search {
+  width: 100%;
+  margin-bottom: 20px; /* 添加底部间距 */
+}
+
+/* 如果需要覆盖Ant Design的默认样式 */
+.home .ant-input-group-wrapper {
+  width: 100%;
+}

@@ -1,0 +1,5 @@
+.search-tools {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
